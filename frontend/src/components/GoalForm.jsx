@@ -31,7 +31,7 @@ function GoalForm() {
             </div>
             <div className="form-group">
                 <button className="btn btn-block" type='submit'>
-                    Add Ingredient
+                    Add Pizza
                 </button>
             </div>
         </form>
