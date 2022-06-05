@@ -23,16 +23,14 @@ function Dashboard() {
       navigate('/login')
     }
 
+    dispatch(getGoals())
+
     return() => {
       dispatch(reset())
     }
   }, [user, navigate, isError, message, dispatch])
 
-  useEffect(() => {
-    dispatch(getGoals())
-    return() => dispatch(reset())
-  }, [dispatch]
-  )
+
 
   if(isLoading) {
     return <Spinner />
@@ -51,7 +49,7 @@ function Dashboard() {
       {goals.length > 0 ? (
         <div className="goals">
           {goals.map((goal) => (
-            <GoalItem key={goal._id} goal = {goal} />
+            <GoalItem key={goal._id} goal={goal} />
         ))}
         </div>
       ) : (

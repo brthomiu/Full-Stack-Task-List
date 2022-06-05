@@ -96,16 +96,18 @@ export const goalSlice = createSlice({
             .addCase(deleteGoal.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.isSuccess = true
-                state.goals = action.payload })
+                state.message = state.goals.splice(state.goals.indexOf(action.payload), 1) })
             .addCase(deleteGoal.rejected, (state, action) => {
                 state.isLoading = false
                 state.isError = true
-               //.filter was getting stuck for some reason, trying to splice instead without much luck
-                state.message = state.goals.splice(state.goals.indexOf(action.payload), 1) })
+                state.message = action.payload })
                 
+               // original code
             //  state.message = state.goals.filter((goal) => goal._id !== action.payload.id) })                
       
-
+                  //.filter was getting stuck for some reason, trying to splice instead without much luck
+               // state.message = state.goals.splice(state.goals.indexOf(action.payload), 1) })
+           
 
     }
 })
