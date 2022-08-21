@@ -4,7 +4,7 @@ const path = require('path')
 const dotenv = require('dotenv').config()
 const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
-const { restart } = require('nodemon')
+//const { restart } = require('nodemon')
 const port = process.env.PORT || 5000
 
 connectDB()
