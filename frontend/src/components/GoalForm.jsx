@@ -1,6 +1,8 @@
 import {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {createGoal} from '../features/goals/goalSlice'
+import React from 'react';
+
 
 function GoalForm() {
 
@@ -19,7 +21,7 @@ function GoalForm() {
     <section className = 'form'>
         <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label htmlFor="text">Pizza</label>
+                <label htmlFor="text">To-Do</label>
                 <input 
                     type="text" 
                     name='text' 
@@ -31,7 +33,7 @@ function GoalForm() {
             </div>
             <div className="form-group">
                 <button className="btn btn-block" type='submit'>
-                    Add Pizza
+                    Add Task
                 </button>
             </div>
         </form>

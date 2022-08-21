@@ -5,6 +5,8 @@ import {toast} from 'react-toastify'
 import {FaUser} from 'react-icons/fa'
 import {register, reset} from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
+import React from 'react';
+
 
 function Register() {
     const [formData, setFormData] = useState({

@@ -11,7 +11,7 @@ const initialState = {
 }
 
 
-//Create new ingredient
+//Create new goal
 export const createGoal = createAsyncThunk('goals/create', async (goalData, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth.user.token
@@ -44,7 +44,7 @@ export const getGoals = createAsyncThunk('goals/getAll', async (_,thunkAPI) => {
 })
 
 
-//Delete ingredient
+//Delete goal
 export const deleteGoal = createAsyncThunk('goals/delete', async (id, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth.user.token
@@ -105,7 +105,7 @@ export const goalSlice = createSlice({
                // original code
             //  state.message = state.goals.filter((goal) => goal._id !== action.payload.id) })                
       
-                  //.filter was getting stuck for some reason, trying to splice instead without much luck
+                  //.filter was getting stuck for some reason, trying to splice instead
                // state.message = state.goals.splice(state.goals.indexOf(action.payload), 1) })
            
 

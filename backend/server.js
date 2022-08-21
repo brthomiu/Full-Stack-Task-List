@@ -1,9 +1,7 @@
 const express = require('express')
 const colors = require('colors')
 const path = require('path')
-const dotenv = require('dotenv').config( {
-    path: path.join(__dirname, '.env')
-})
+const dotenv = require('dotenv').config()
 const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 const { restart } = require('nodemon')

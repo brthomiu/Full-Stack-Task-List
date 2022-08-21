@@ -5,6 +5,8 @@ import GoalForm from '../components/GoalForm'
 import GoalItem from '../components/GoalItem'
 import Spinner from '../components/Spinner'
 import {getGoals, reset} from '../features/goals/goalSlice'
+import React from 'react';
+
 
 function Dashboard() {
 
@@ -40,7 +42,7 @@ function Dashboard() {
   <>
     <section className="heading">
       <h1>Welcome {user && user.name}</h1>
-      <p>Pizza Dashboard</p>
+      <p>Dashboard</p>
     </section>
 
     <GoalForm />
@@ -53,7 +55,7 @@ function Dashboard() {
         ))}
         </div>
       ) : (
-        <h3>You have never made a pizza</h3>)}
+        <h3>There are no tasks left to complete.</h3>)}
     </section>
 
   </>
