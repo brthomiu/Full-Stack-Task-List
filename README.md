@@ -1,5 +1,6 @@
 # Full Stack Task List
 ### Live demo: https://restfulmern2022.herokuapp.com/
+<sup><sub> Please be patient, the free Heroku tier takes a second to spin up. </sup></sub>
 
 <img src="/frontend/src/assets/tasklistGif.gif" alt="Fullstack task list demo animation">
 
